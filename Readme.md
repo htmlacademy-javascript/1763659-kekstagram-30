@@ -1,7 +1,7 @@
 # Личный проект «Кекстаграм»
 
 * Студент: [Almaz Zaripov](https://up.htmlacademy.ru/javascript/30/user/1763659).
-* Наставник: `Неизвестно`.
+* Наставник: `Anton Popov`.
 
 ---
 
