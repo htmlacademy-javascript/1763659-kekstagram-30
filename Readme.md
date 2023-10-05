@@ -2,6 +2,7 @@
 
 * Студент: [Almaz Zaripov](https://up.htmlacademy.ru/javascript/30/user/1763659).
 * Наставник: `Anton Popov`.
+Кексобот не находит пулреквест, попробую еще раз.
 
 ---
 
