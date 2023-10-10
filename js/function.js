@@ -4,7 +4,6 @@ function getStringLength(string, maxLength) {
 }
   console.log(getStringLength('asdadasda3', 20));
 
-
 // Проверка на полиндром
 const strSource = 'Лёша на полке клопа нашёл';
 const strClean = strSource.toLowerCase().replaceAll(' ', '');
