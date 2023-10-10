@@ -5,11 +5,16 @@ function getStringLength(string, maxLength) {
   console.log(getStringLength('asdadasda3', 20));
 
 // Проверка на полиндром
-const stringSource = 'Лёша на полке клопа нашёл';
-let stringClean = stringSource.toLowerCase().replaceAll(' ', '');
-  console.log(stringClean);
+const strSource = 'Лёша на полке клопа нашёл';
+const strClean = strSource.toLowerCase().replaceAll(' ', '');
+console.log(strClean);
 
-let charAmount = stringClean.length - 1;
-  for (let i = charAmount; i > 0; i--) {
-    console.log(stringClean[i]);
-let
+function strReverse() {
+  return strClean.split('').reverse().join('');
+}
+console.log(strReverse(strClean));
+
+function getStringCompare(strClean, strReverse) {
+  return strClean === strReverse();
+}
+console.log(getStringCompare(strClean, strReverse));
