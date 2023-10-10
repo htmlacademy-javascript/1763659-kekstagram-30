@@ -40,7 +40,6 @@ console.log(getNumber('ECMAScript 2022'));
 console.log(getNumber('1 кефир, 0.5 батона'));
 console.log(getNumber('агент 007'));
 console.log(getNumber('а я томат'));
-console.log(getNumber(-1));
 
 // Функция извлечения цифр от 0 до 9
 // Возврат в виде положительного числа
