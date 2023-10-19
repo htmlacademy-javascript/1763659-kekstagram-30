@@ -29,7 +29,7 @@ function getNumber(strRandom) {
       result += strNumber;
     }
   }
-  if(result === '') {
+  if (result === '') {
     return NaN;
   }
   return result;
