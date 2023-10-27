@@ -10,10 +10,7 @@ function getRandomInteger (min, max) {
   const result = Math.random() * (upper - lower + 1) + lower;
 
   return Math.floor(result);
-};
-
-export {getRandomInteger};
-
+}
 /**
  * получение случайного значения из диапазона целых чисел;
  * @param {int} min — минимальное значение
@@ -26,8 +23,7 @@ function createRandomIdfromInteger (min, max) {
   return function () {
     let currentValue = getRandomInteger(min, max);
     if (previousValues.length >= (max - min + 1)) {
-      console.error('Перебраны все числа из диапазона от ' + min + ' до ' + max);
-      return null;
+      throw(`Перебраны все числа из диапазона от ${min} до ${max}`);
     }
     while (previousValues.includes(currentValue)) {
       currentValue = getRandomInteger(min, max);
@@ -37,4 +33,4 @@ function createRandomIdfromInteger (min, max) {
   };
 }
 
-export {createRandomIdfromInteger};
+export {createRandomIdfromInteger, getRandomInteger};

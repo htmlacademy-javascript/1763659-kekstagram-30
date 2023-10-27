@@ -1,6 +1,6 @@
 // Функция трансформации часов в минуты
 function convertHoursToMinute(str) {
-  let [hours, minutes] = str.split(':');
+  const [hours, minutes] = str.split(':');
   return (+hours * 60) + (+minutes);
 }
 // Трансформируем часы в минуты и записываем в массив
@@ -10,9 +10,11 @@ function dataInput (startDay, endDay, eventStart, duration) {
   const endDayInMin = timeInMinutes[1];
   const eventStartInMin = timeInMinutes[2];
 
-// Проверяем условие
+  // Проверяем условие
   return endDayInMin >= startDayInMin &&
     eventStartInMin >= startDayInMin &&
     eventStartInMin <= endDayInMin &&
     eventStartInMin + duration <= endDayInMin;
 }
+
+export {dataInput};
