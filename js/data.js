@@ -31,36 +31,33 @@ const DESCRIPTIONS = [
   'Кораблекрушение',
 ];
 
-
-
-const getComments = () => {
+const getComment = () => {
   const createCommentId = createRandomIdfromInteger(0, 9999);
   const createCommentAvatarId = createRandomIdfromInteger(1, 6);
-  const createCommentMessage = getRandomInteger(0, MESSAGES.length - 1);
-  const createCommentName = getRandomInteger(0, NAMES.length - 1);
-
+  const commentMessageIndex = getRandomInteger(0, MESSAGES.length - 1);
+  const commentNameIndex = getRandomInteger(0, NAMES.length - 1);
   return {
     id: createCommentId(),
     avatarId: `img/avatar-${createCommentAvatarId()}.svg`,
-    message: MESSAGES[getRandomInteger(0, MESSAGES.length - 1)],
-    name: NAMES[getRandomInteger(0, NAMES.length - 1)],
+    message: MESSAGES[commentMessageIndex],
+    name: NAMES[commentNameIndex],
   };
 };
 
-const getObject = () => {
+const getPhoto = () => {
   const createObjectId = createRandomIdfromInteger(1, 25);
   const createObjectURL = createRandomIdfromInteger(1, 25);
-  const createObjectDescription = getRandomInteger(0, DESCRIPTIONS.length - 1);
+  const descrPhotoIndex = getRandomInteger(0, DESCRIPTIONS.length - 1);
   const createLikes = createRandomIdfromInteger(15, 200);
-
   return {
     id: createObjectId(),
-    url: 'photos/' + createObjectURL() + '.jpg',
-    description: DESCRIPTIONS[getRandomInteger(0, DESCRIPTIONS.length - 1)],
+    url: `photos/${createObjectURL()}.jpg`,
+    description: DESCRIPTIONS[descrPhotoIndex],
     like: createLikes(),
-    comment: getComments(),
+    comment: getComment(),
   };
 };
 
-const severalObjects = Array.from({length: 25}, getObject);
-console.log(severalObjects);
+const getSeveralPhotos = () => Array.from({length: 25}, getPhoto);
+
+export {getSeveralPhotos};
